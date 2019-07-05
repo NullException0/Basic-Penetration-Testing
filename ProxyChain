@@ -1,0 +1,31 @@
+first install TOR service
+sudo apt-get install tor
+
+configure proxychain config file
+leafpad /etc/proxychains.conf
+
+uncomment # random_chain
+uncomment # Proxy DNS requests - no leak for DNS data
+
++++ to make sure that TOR relay are being use on proxychains +
+go to [ProxyList]
+add this entry
+socks4 127.0.0.1 9050
+socks5 127.0.0.1 9050
+++ you can add other proxy relay you want to use ++
+
+save the file.
+
+++ first thing need to do to lauch instance of proxychains is to make sure TOR service started.
+++ use service manager to start tor service ++
+
+service tor start
+
+++ to restart the TOR service or want to change entry node through tor network ++
+
+service tor restart
+
+++ tor service has been started and you can use proxy change on your application ++
+
+proxychains firefox google.com
+proxychains nmap [ip address or domain name]
