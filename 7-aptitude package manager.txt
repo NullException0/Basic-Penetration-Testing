@@ -1,0 +1,28 @@
+aptitude package manager (apt)
+used for update, upgrade, install and remove packages
+
+++ update repositories ++
+#sudo apt-get update
+
+++ install packages ++
+you have to know name of the package, for example tor service
+#sudo apt-get install tor
+
+I usually add -y for automatic response to install the package
+#sudo apt-get install tor -y
+
+++ removing packages ++
+example removing tor service
+#sudo apt-get remove tor
+
+++ check of update and upgrade ++
+update & upgrade system wide package to the latest version available
+#sudo apt-get upgrade
+
+update & upgrade specific package to the latest version available
+#sudo apt-get upgrade tor
+
+upgrading to latest distribution
+#sudo apt-get dist-upgrade
+
+
