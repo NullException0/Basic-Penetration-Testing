@@ -1,0 +1,15 @@
+service is start with this command
+#service [service name] start
+
+service is stop with this command
+#service [service name] stop
+
+service is restart with this command
+#service [service name] start
+
+apache service
+#service apache2 start
+
+directory for hosting web file
+/var/www/html
+

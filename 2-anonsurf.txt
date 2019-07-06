@@ -1,0 +1,36 @@
+anonsurf
+
+alternative to proxychains
+use to anonymize entire system using TOR proxy.
+restart to get new identity.
+
+
+get latest repository of kali-anonsurf.
+git clone https://github.com/Und3rf10w/kali-anonsurf.git
+
+install the repository
+cd kali-anonsurf/
+./installer.sh
+
+wait until installation finish
+
+to check anonsurf usage
+anonsurf --help
+
+
+Parrot AnonSurf Module
+	Usage:
+	┌──[root@kali]─[/root/Desktop/kali-anonsurf]
+	└──╼ $ anonsurf {start|stop|restart|change|status}
+	
+	 start - Start system-wide anonymous
+		  tunneling under TOR proxy through iptables	  
+	 stop - Reset original iptables settings
+		  and return to clear navigation
+	 restart - Combines "stop" and "start" options
+	 change - Changes identity restarting TOR
+	 status - Check if AnonSurf is working properly
+	 myip - Show your current IP address
+	----[ I2P related features ]----
+	 starti2p - Start i2p services
+	 stopi2p - Stop i2p services

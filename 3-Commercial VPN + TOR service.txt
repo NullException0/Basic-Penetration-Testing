@@ -1,0 +1,22 @@
+use a proxychains in conjuction with commercial VPN provider (NORD VPN)
+
+drawback - speed
+
+Step by step
+
+
+on host machine
+- start the VPN
+- you must change your domain name server (custom or automatic)
+- recommended to use from cloudflare etc.
+
+on virtual machine
+- use NAT on network adapter
+- you can change DNS setting and restart network manager, for safety precaution.
+- start or restart the TOR service
+
+service tor start
+service tor restart
+
+
+and do your things
