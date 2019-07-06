@@ -1,0 +1,19 @@
+Git setup to upload file in folder
+
+++ iniatialize git in folder ++
+#git init
+
+++ add remote ++
+#git remote add [name of remote] [https://addresstoremote.git]
+
+++ add untrack file in git folder ++
+git add [name of file.extension]
+
+++ add all file in git folder ++
+git add -A
+
+++ git commit ++
+#git commit -m "the message of commit"
+
+++ git push ++
+#git push -u [remote name] master
