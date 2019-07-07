@@ -17,3 +17,4 @@ git add -A
 
 ++ git push ++
 #git push -u [remote name] master
+

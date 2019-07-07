@@ -1,0 +1,18 @@
+TCP 3 Way Handshake
+
++ Method used in TCP/IP Network to create a connection between local host/client and server
++ Client initiate the connection by sending a packet to the server with the SYN flag (the SYN flag tells the server that the client is attempting to establish connection)
++ Server responds to the client with a packet that has both the ACK and SYN flags (the server acknowledges the connection)
++ The client receives the SYN ACK flags and sends a packet with the ACK flag to the server (Acknowledging the connection)
++ A TCP Socket connection is established
+
+
+TCP Flags
+
++ Used to indicated the type of packet
+	++ URG - Urgent
+	++ ACK - Acknowledge
+	++ PSH - Push
+	++ RST - Reset
+	++ SYN - Synchronize
+	++ FIN - Finish

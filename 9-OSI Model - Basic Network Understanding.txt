@@ -1,0 +1,64 @@
+OSI Model - to understanding on network scanning
+
++ Open system Interconnection
++ To understad NMAP perform scanning
++ NMAP uses the network and transport layer
+
+Network layer
+
++ layer used for transfer or flow of packets across the network
++ IP version IPv4, IPv6
++ specifies the format of packets and contains addressing information that enables packets to be routed
++ provide only the functions that are neccessary to deliver a packet from a source to a destination over interconnected system of networks
+
+
+IPv4 Packet header
+
++ IPv4 protocol defines different field in the packet header.
++ These fields contain binary values that the IPv4 services reference as they forward packets across the network
++ IPv4 packet header contain
+	++ IP Source Address - packet source
+	++ IP Destination Address - packet destination
+	++ Time-to-Live (TTL) - An 8-bit values that indicates the remaining life of the packet
+	++ Type-of-Service (ToS) - The Type-of-Service field contains an 8-bit binary value that is used to determine the priority of each packet
+	++ Protocol - This 8-bit value indicates the data payload type that the packet is carrying
+
+
+Transport Layer
+
++ used for the transfer of packets between 2 hosts for the application layer
++ Protocol used in L4
+	++ ICMP - Internet Control Message Protocol
+	++ UDP - User Datagram Protocol
+	++ TCP - Transmission Control Protocol
+
+ICMP - Internet Control Message Protocol
+
++ Error reporting protocol and is used by routers, hosts and network devices to generate error messages when there are problems delivering IP packets
+	++ Used to send messages
+	++ used to perform network diagnostics
++ ICMP is not ad transport protocol that sends data between systems
++ ICMP Header
+	++ has 2 type of messages which is the request and response pair
+		+++ Example: echo request, timestamp request
+
+
+UDP - User Datagram Protocol
+
++ Used primarily for establishing low-latency connection between application on the internet
+	++ Unreliable - has no guarentee of delivery
+	++ Connectionless - no handshake process
++ UDP header
+	++ Source Port - selected from the unused list of ports
+	++ Destination Port - Selected from the static and well known ports
+		+++ Example: Web server run on port 80
+
+
+TCP - Transmission Control Protocol
+
++ Is a standard that defines how to establish and maintain a network conversation via which application programs can exchange data.
+	- Reliable and ordered
++ TCP Header contain
+	++ Source port
+	++ Destination port
+	++ Flags
