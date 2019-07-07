@@ -1,0 +1,42 @@
+DNS Enumeration
+
++ Be careful of running this type for information gathering
++ Do at system you have permission and under legal constraint
+
+host
++ Framework use to enumerate some DNS information
++ Can be use with query option
+
+host: illegal option -- -
+Usage: host [-aCdilrTvVw] [-c class] [-N ndots] [-t type] [-W time]
+            [-R number] [-m flag] hostname [server]
+       -a is equivalent to -v -t ANY
+       -c specifies query class for non-IN data
+       -C compares SOA records on authoritative nameservers
+       -d is equivalent to -v
+       -i IP6.INT reverse lookups
+       -l lists all hosts in a domain, using AXFR
+       -m set memory debugging flag (trace|record|usage)
+       -N changes the number of dots allowed before root lookup is done
+       -r disables recursive processing
+       -R specifies number of retries for UDP packets
+       -s a SERVFAIL response should stop query
+       -t specifies the query type
+       -T enables TCP/IP mode
+       -v enables verbose output
+       -V print version number and exit
+       -w specifies to wait forever for a reply
+       -W specifies how long to wait for a reply
+       -4 use IPv4 query transport only
+       -6 use IPv6 query transport only
+
++ Example usage with proxychains
+
+# proxychains host xxxxxxxx.com
+ProxyChains-3.1 (http://proxychains.sf.net)
+|DNS-request| ::1 
+|R-chain|-<>-127.0.0.1:9050-<><>-4.x.x.x:53-<><>-OK
+|DNS-response|: ::1 does not exist
+xxxxxxxx.com has address xxx.xxx.xxx.xxx
+xxxxxxxx.com mail is handled by 20 mx2.xxxx.com.
+xxxxxxxx.com mail is handled by 10 mx.xxxx.com.

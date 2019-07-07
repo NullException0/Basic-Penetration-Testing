@@ -1,0 +1,8 @@
+Information gathering : whois lookup and DNS Reconnaisance
+
+Automated lookup
++ dnsstuff.com
++ netcraft.com
+
+WHOIS command
+#whois [domain name or IP address]

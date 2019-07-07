@@ -1,0 +1,9 @@
+Active Information Gathering with DNSRecon
+
++ Come preinstalled with Kali distro
++ Using DNSRecon
+	#dnsrecon -d [domain name]
+
++ Using DNSRecon for DNS Zone Transfer
+	++ what you're looking for with the zone transfer is a poorly designed system where one is able to perform his own transfer and essentially get a site map of how of all the servers and how they are configured.
+		#dnsrecon -d [domain name] -t axfr
