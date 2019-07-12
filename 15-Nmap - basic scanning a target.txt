@@ -1,0 +1,48 @@
+NMap - Scanning a single target
+
++ Manual or help
+	#nmap --help
+
++ Scan without any option
+	++ this by default nmap will scan 1000 common port
+		#nmap [ip address / domain name]
+		# nmap 192.168.202.142
+
+NMap - Scanning multiple target
+
++ scanning multiple IP address / domain
+	# nmap 192.168.202.100 192.168.202.200
+
++ scanning multiple IP address in same subnet
+	# nmap 192.168.202.1,2,3,4,5
+
++ scanning range of IP address by using hyphen (-)
+	# nmap 192.168.202.1-255
+	
++ Scanning an entire subnet
+	# nmap xxx.xxx.xxx.xxx/[subnet mask CIDR]
+	# nmap 192.168.202.1/24
+
++ Scanning from a list of IP in text file
+	# nmap -iL [nameoffile.txt]
+	# nmap -iL target.txt
+
++ Scanning using nmap and excluding target from a scan
+	# nmap xxx.xxx.xxx.xxx-xxx --exclude xxx.xxx.xxx.xxx
+	# nmap 192.168.202.1-255 --exclude 192.168.202.1
+	
++ Scanning using nmap and excluding multiple target from a scan
+	# nmap xxx.xxx.xxx.xxx-xxx --exclude xxx.xxx.xxx.xxx,xxx
+	# nmap xxx.xxx.xxx.xxx-xxx --exclude xxx.xxx.xxx.xxx-xxx
+
+	# nmap 192.168.202.1-255 --exclude 192.168.202.20,30,40,50
+	# nmap 192.168.202.1-255 --exclude 192.168.202.20-30
+
++ Scanning a range and exclude list of IP from text file
+	# nmap xxx.xxx.xxx.xxx/xx --excludefile [nameoffile.txt]
+	# nmap xxx.xxx.xxx.xxx-xxx --excludefile [nameoffile.txt]
+	
+	# nmap 192.168.202.1/24 --excludefile exclude.txt
+
+
+

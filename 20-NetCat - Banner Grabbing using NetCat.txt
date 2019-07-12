@@ -1,0 +1,11 @@
+Banner Grabbing with NetCat
+
++ Swiss Army of Networking
++ Banner Grabbing is used to gain information about a computer system on a network and the service is running on its open ports
++ enumering the service and software running on open ports
+
++ using -nv option on netcat
+	++ -n = numeric-only IP addresses, no DNS
+	++ -v = verbose [use twice to be more verbose]
+		# nc -nv [ip address] [port]
+		# nc -nv 192.168.202.142 22

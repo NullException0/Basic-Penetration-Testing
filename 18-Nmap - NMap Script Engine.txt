@@ -1,0 +1,20 @@
+NMap Script Engine
+
++ Allow you to perform a wide variety of scans from network discovery, vulnerability analysis, vulnerability detection or vulnerability exploitation
+
++ Automate scans essentially creating a script to automate a specific type of scan or extensive scan
+
++ script are store at /usr/share/nmap/scripts/
+
++ running default script scan
+	++ default script option use scripting engine to scan service on target services or port using any available nmap script
+		# nmap -sC [ip or domain]
+		# nmap -sC 192.168.202.142
+		
++ running specific script scan on target
+	# nmap -script=[name of script] [target ip] 
+	# nmap --script=ssh-hostkey.nse 192.168.202.142
+
++ running specific script scan on target at specific port
+	# nmap -script=[name of script] -p [port number] [target ip] 
+	# nmap --script=ssh-hostkey.nse -p 22 192.168.202.142

@@ -1,0 +1,16 @@
+NMap - Aggressive scanning and OS detection
+
+Using combination of NMap option in command
+
++ Enable OS detection, application version detection, script scanning, and traceroute
+	# nmap -A 192.168.202.142
+
++ Using SYN scan
+	++ in SYN scan, 3 Way Handshake is not complete
+	++ the reason is less noisy and stealthy, because firewall usually on looking at complete TCP 3 way handshake
+	++ SYN is fast scan
+		#nmap -sS 192.168.202.1
+
++ Nmap UDP scan
+	# nmap -sU xxx.xxx.xxx.xxx
+	# nmap -sU 192.168.202.142
