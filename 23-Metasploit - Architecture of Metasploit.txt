@@ -1,0 +1,22 @@
+Metasploit - Understanding Metasploit module
+
+Metasploit architecture
++ Module are catagories into 6 type
+	+ module are stored in /usr/share/metasploit-framework/modules
+		++ exploit - exploit system vulnerability to install payload
+		
+		++ payload - installed and left in exploited machine to give attacker access or control over the system
+			+++ singles - simple feature of malicious code that perform simple or single action (keylogger etc)
+			+++ stages - used for performing or creating a communication between the attacker and the exploited target that can be used to deliver another payload
+			+++ stagers - very large payload that are feature rich that give attacker functionality to have very good control over the exploited target (metepreter shell, reverse shell, vnc)
+			
+		++ auxiliary - provide robust tool and provide functionality to scan for vulnerabilies or Denial of Service (vulnerability scanner, sniffer, crawler, spoofer, fuzzers etc)
+		
+		++ encoders - re-encode payloads and exploits for evasion techniques
+			++ use or create or use and encoder based upon the target system
+		
+		++ nops -  allowing you to get a system for it to perform or to run a specific file or code for that matter after exploited the buffer overflow
+		
+		++ post - used after system is exploited that allow futher attack after the system is owned
+		
+		

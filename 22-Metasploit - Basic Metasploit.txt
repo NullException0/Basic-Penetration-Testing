@@ -1,0 +1,48 @@
+Metasploit Basic
+
++ To make metasploit load faster, start postgresql in advance
+	# service postgresql start
+	
++ To launch metasploit console
+	# msfconsole
+
++ Metasploit consists of:
+	++ exploits
+		+++ module that make use system vulnerability to install payload
+	++ payload
+		+++ consist of meterpreter or reverse shell, to give access to target machine
+	++ post
+	++ nops
+	++ encoder
+	++ auxiliary
+
++ Use command
+	# use xxxxxx
+	
++ Use an exploits
+	# use exploit/.../.../.../
+	
++ show payloads
+	# show payloads
+	
++ show target
+	# show targets
+	
++ show infomation regarding exploit used
+	# show info
+	
++ search command in msfconsole for specific filter
+	++ platform filter
+	++ type of module or payload filter
+	++ name filter
+		# search type:exploit platform:windows eternalblue
+
++ set option of the exploit used
+	set SRVPORT 80
+	set SRVHOST xxx.xxx.xxx.xxx
+
++ run the exploit
+	++ exploit
+	
+	
+	

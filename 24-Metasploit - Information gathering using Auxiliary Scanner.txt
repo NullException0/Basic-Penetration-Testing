@@ -1,0 +1,12 @@
+Metasploit - Information gathering using Auxiliary Scanner
+
++ NMap Stealth Scan
+	# nmap -sS [IP address or domain]
+	# nmap -sS 192.168.202.142
+
++ detecting ssh version
+	# search ssh_scanner
+	# use auxiliary/scanner/ssh/ssh_version
+	# set RHOST [target machine]
+	# set THREADS 100
+	# run
