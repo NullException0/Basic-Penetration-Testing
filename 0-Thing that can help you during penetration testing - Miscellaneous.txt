@@ -1,0 +1,23 @@
+Thing that can help you during penetration testing - Miscellaneous
+
+wordlist file - /usr/share/wordlists
+
+ Veil Configuration:
+ [*] OPERATING_SYSTEM = Kali
+ [*] TERMINAL_CLEAR = false
+ [*] VEIL_PATH = /usr/share/veil/
+ [*] WINEPREFIX = /var/lib/veil/wine/
+ [*] TEMP_PATH = /tmp/
+ [*] METASPLOIT_PATH = /usr/share/metasploit-framework/
+ [*] MSFVENOM_PATH = /usr/bin/
+ [*] MSFVENOM_OPTIONS = 
+ [*] PYINSTALLER_PATH = /var/lib/veil/PyInstaller-3.2.1/
+ [*] GOLANG_PATH = /var/lib/veil/go/
+
+ Veil-Evasion Configuration:
+ [*] PAYLOAD_SOURCE_PATH = /var/lib/veil/output/source/
+ [*] PAYLOAD_COMPILED_PATH = /var/lib/veil/output/compiled/
+ [*] HANDLER_PATH = /var/lib/veil/output/handlers/
+ [*] HASH_LIST = /var/lib/veil/output/hashes.txt
+ [I] Path '/etc/veil/' Created
+ [I] Configuration File Written To: '/etc/veil/settings.py'

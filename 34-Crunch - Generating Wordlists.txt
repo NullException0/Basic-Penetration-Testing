@@ -1,0 +1,11 @@
+Crunch - Generating Wordlists
+
++ Generating your own wordlist
+
++ Crunch can create a wordlist based on criteria you specify
+
++ The output from crunch can be sent to the screen, file, or to another program.
+
++ Usage
+	# crunch <min> <max> [options]
+	# crunch 4 6 1234567890 -o min4max6num.txt
