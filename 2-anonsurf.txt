@@ -1,21 +1,20 @@
-anonsurf
+anonsurf - Hide your whole track and Anonymity using TOR service
 
-alternative to proxychains
-use to anonymize entire system using TOR proxy.
-restart to get new identity.
++ alternative to proxychains
++ use to anonymize entire system using TOR proxy.
++ restart to get new identity.
 
++ get latest repository of kali-anonsurf.
+	# git clone https://github.com/Und3rf10w/kali-anonsurf.git
 
-get latest repository of kali-anonsurf.
-git clone https://github.com/Und3rf10w/kali-anonsurf.git
++ install the repository
+	# cd kali-anonsurf/
+	# ./installer.sh
 
-install the repository
-cd kali-anonsurf/
-./installer.sh
++ wait until installation finish
 
-wait until installation finish
-
-to check anonsurf usage
-anonsurf --help
++ to check anonsurf usage
+	# anonsurf --help
 
 
 Parrot AnonSurf Module

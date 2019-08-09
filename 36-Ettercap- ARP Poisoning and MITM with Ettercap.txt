@@ -1,0 +1,27 @@
+ARP Poisoning - MITM ARP Poisoning with Ettercap
+
++ Running ettercap
+	#ettercap -G
+
++ Select sniffing option
+	++ If connected physically through network interface, switch or hub, recommended use Bridged sniffing
+	++ If just using adapter from vm, I suggest using Unified sniffing, I'm using a vm so I use this.
+
++ Select network interface
+
++ Go Targets menu and select current targets or ctrl + t
+
++ Add target 1 using Default gateway IP address
+
++ Add target 2 using target victim IP address
+
++ To start ARP Poisoning, Go to MITM menu and select ARP Poisoning, popup will appear and must select Sniff remote connection then clik ok
+
++ Now you can start to sniffing and packet capture the traffic using packet capture tools such as tcpdump, wireshark etc.
+
++ Using TCPdump from capturing packet and traffic from victim machine
+	# tcpdump -i [interface] -n port 80 and host [target IP address]
+	# tcpdump -i eth0 -n port 80 and host 192.168.202.142
+	
++ Using wireshark is easier option for me as of now.. lol
+	
