@@ -1,0 +1,36 @@
+Empire - Empire Quick Start
+
+Empire Installation
+
++ I used modded Empire from Hackplayers because of main repository have some problem when install in Kali
+	
+	# git clone https://github.com/Hackplayers/Empire-mod-Hackplayers.git
+	# mv Empire-mod-Hackplayers Empire
+	# cd Empire/setup && ./install.sh
+	# cd ..
+	# ./empire
+
+Empire Terminology
+
++ Stager - Establishes connection to Empire C2 server (payload that run on victim machine)
++ Listeners - Service on Empire C2 server that receives and handles connections from executed stagers
++ Agents - Infected hosts
++ Modules - Scripts that perform specific tasks on an infected host, such as gaining persistence, performing privilege escalation, etc.
+
+
+How Empire works
+
++ Essentially you start with a listener running on the Empire control server.
++ Get Stager code onto the victim which infecting target machine and get persistance.
++ Once Stager in run, it establishes connection with Empire command and control server.
++ At this point, Empire C2 server can execute modules and other commands on the victim machine to get desire result.
+
+
+How Empire Command and Control
+
++ Empire C2 agents are asynchronous which means agents will periodically send small connections to the C2 server to poll for tasking.
++ Uses HTTP GET requests to poll for taskings
++ Uses HTTP POST request to send data
++ Empire communications are encrypted and designed to appear benign
++ Empire act as One to Many connection
++ Agent can pull task periodically not in continously established connection

