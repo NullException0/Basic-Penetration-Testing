@@ -1,0 +1,14 @@
+Disable Windows Firewall and windows defender
+
++ To turn off Windows Firewall
+	# netsh advfirewall set allprofiles state off
+
++ To turn on Windows Firewall
+	# netsh advfirewall set allprofiles state on
+
++ To check the status of Windows Firewall:
+	# netsh advfirewall show allprofiles
+
++ Disable Anti Virus (Windows Defender)
+	# sc config WinDefend start= disable
+	# sc stop WinDefend
