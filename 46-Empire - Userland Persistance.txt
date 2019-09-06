@@ -1,0 +1,44 @@
+Empire - Userland Persistance
+
++ Establish "Userland" persistance so that you can escalate priviledge and move laterally
+
++ We will apply Empire userland persistance module registry and schtasks
+
+
+Empire userland/persistance/registry module
+
++ Establish persistance in Windows registry by inserting Empire stager at HKCU\Software\Microsoft\Windows\CurrentVersion\Run
+
++ We can apply different registry key, an alternate data stream or event log ID
+
++ This module not OPSEC safe, when a user log in, they will see a terminal flash of stager execution
+
++ Use persistance/userland/registry module
+	# (Empire) > usemodule persistance/userland/registry
+	
++ Configure the listener and other option as you require and execute
+	# (Empire powershell/persistance/userland/registry) > set listener http
+	# (Empire powershell/persistance/userland/registry) > execute
+
++ When victims power on or login back to the system, we can maintain the connection with victim but victim can suspect something is happening when the command prompt is flashing
+
+
+Empire userland/persistance/schtasks module
+
++ This module simply creates a low privileged schedule task that will run at a specific time of day or after the user has been idle for a specified time
+
++ Victims idle time is generally a best option as the task will only run if the user has been away from the computer
+
++ Terminal will briefly flash but a user probably won't be around to see it.
+
++ Use persistance/userland/schtasks module
+	# (Empire) > usemodule persistance/userland/schtasks
+	
++ Configure the listener, idle time in minute and other option as you require and execute
+	# (Empire powershell/persistance/userland/schtasks) > set listener http
+	# (Empire powershell/persistance/userland/schtasks) > set IdleTime 1
+	# (Empire powershell/persistance/userland/schtasks) > execute
+	
++ This module can be check in task scheduler
+
++ Empire provides a cleanup option that will restore the system to its pre persistence state

@@ -1,0 +1,28 @@
+Empire - Enumerating Local Machine and Anti Virus
+
+
+Enumerating Anti Virus module
+
++ Anti Virus can be quite disruptive particularly if you're trying to utilize common penetration testing tools like Mimikat, netcat or FGDump
+
++ identifying anti-virus will enable you obfuscate your tools or create payloads that will work in your target's environment
+
++ Empire offers the anti-virus module to help us identify any antivirus solutions that may be in our way
+
++ Interact with the agent and use the module
+	# (Empire : TargetMe) > usemodule situational_awareness/host/antivirusproduct
+	# (Empire : powershell/situational_awareness/host/antivirusproduct) > info
+	# (Empire : powershell/situational_awareness/host/antivirusproduct) > execute
+
+
+Enumerating Local Machine module
+
++ Empire offers a useful enumerations script that performs many enumeration techniques in an automated fashion
+
++ To understand as mush as we can about infected host to figure out how to escalate priviledges
+
++ Interact with the agent and use the module
+	# (Empire : TargetMe) > usemodule situational_awareness/host/winenum
+	# (Empire : powershell/situational_awareness/host/winenum) > execute
+
++ It take some time to finish

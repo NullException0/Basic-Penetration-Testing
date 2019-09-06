@@ -1,0 +1,38 @@
+Empire - Empire PowerUp Module and UAC Bypass
+
+
++ This module will search for common privilege escalation vulnerabilities such as vulnerable services, latent passwords, UAC bypass and more
+
++ Starting point to help you for escalating privilege
+
++ Interact with agent and use the module
+	# (Empire: TargetMe) > usemodule privesc/powerup/allchecks
+	# (Empire: powershell/privesc/powerup/allchecks) > execute
+	
+	
+Empire UAC Bypass
+
++ User Account Control enforces process integrity levels: High, Medium and low
+
++ If user is local administrator, UAC will ensure most of their applications will run with medium integrity
+
++ If you compromise a user who is a member of a local administrator group via a client side attack your payload will only exist in a medium integrity process
+
++ This means that you won't be able to elevate to administrator even though the victim user is a member of the Administrators group
+
++ We can overcome UAC restrictions by using Empire bypass UAC module
+
++ This module will allow us to skate over a medium integrity process by utilizing a trusted publisher certificate through process injection
+
++ The module then spawn a process powershell.exe with UAC turned off
+
++ When UAC is turned off, privileged commands can be run without fear that the UAC box will impede our efforts.
+
++ Interact with agent, use module, configure the module and execute the module
+	# (Empire: TargetMe) > usemodule privesc/bypassuac
+	# (Empire: powershell/privesc/bypassuac) > set Listener http
+	# (Empire: powershell/privesc/bypassuac) > execute
+
++ You will get new agent from the same system, observe at Username, the new agent will have asterisk append to it username
+
++ This new agent is a session without UAC enabled and you can execute module like Get-System to escalate to the most privileged account on the system
