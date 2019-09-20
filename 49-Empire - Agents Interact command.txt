@@ -1,0 +1,41 @@
+Empire - Agents Interact command
+
+Agent Commands
+==============
+agents            Jump to the agents menu.
+back              Go back a menu.
+bypassuac         Runs BypassUAC, spawning a new high-integrity agent for a listener. Ex. spawn <listener>
+clear             Clear out agent tasking.
+creds             Display/return credentials from the database.
+download          Task an agent to download a file.
+downloads         Return downloads or kill a download job
+exit              Task agent to exit.
+help              Displays the help menu or syntax for particular commands.
+info              Display information about this agent
+injectshellcode   Inject listener shellcode into a remote process. Ex. injectshellcode <meter_listener> <pid>
+jobs              Return jobs or kill a running job.
+kill              Task an agent to kill a particular process name or ID.
+killdate          Get or set an agent's killdate (01/01/2016).
+list              Lists all active agents (or listeners).
+listeners         Jump to the listeners menu.
+lostlimit         Task an agent to change the limit on lost agent detection
+main              Go back to the main menu.
+mimikatz          Runs Invoke-Mimikatz on the client.
+psinject          Inject a launcher into a remote process. Ex. psinject <listener> <pid/process_name>
+pth               Executes PTH for a CredID through Mimikatz.
+rename            Rename the agent.
+resource          Read and execute a list of Empire commands from a file.
+revtoself         Uses credentials/tokens to revert token privileges.
+sc                Takes a screenshot, default is PNG. Giving a ratio means using JPEG. Ex. sc [1-100]
+scriptcmd         Execute a function in the currently imported PowerShell script.
+scriptimport      Imports a PowerShell script and keeps it in memory in the agent.
+searchmodule      Search Empire module names/descriptions.
+shell             Task an agent to use a shell command.
+sleep             Task an agent to 'sleep interval [jitter]'
+spawn             Spawns a new Empire agent for the given listener name. Ex. spawn <listener>
+steal_token       Uses credentials/tokens to impersonate a token for a given process ID.
+sysinfo           Task an agent to get system information.
+updateprofile     Update an agent connection profile.
+upload            Task an agent to upload a file.
+usemodule         Use an Empire PowerShell module.
+workinghours      Get or set an agent's working hours (9:00-17:00).

