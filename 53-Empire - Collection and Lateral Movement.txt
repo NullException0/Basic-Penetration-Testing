@@ -1,0 +1,12 @@
+Empire - Collection and Lateral Movement
+
++ As part of offensive activities, hacker continously hunt for sensitive information such as:
+	++ usernames
+	++ passwords
+	++ sensitive documents
+	++ emails
+	++ databases
+	
++ Credentials collected on one system will be recycled on others
+
++ Through this iterative process of collect, recycle, and spread, attackers pivot mercilessly through target networks

