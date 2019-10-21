@@ -1,0 +1,26 @@
+Whatweb and Dirb - Information Gathering For Web Server And Directory Bruteforce
+
+Whatweb
+
++ Allow attacker to gather information regarding the web server, version of web application and plugins.
+
++ Whatweb help menu
+	++ Short help menu
+		# whatweb
+	++ Long help menu
+		# whatweb --help
+
++ Basic usage of whatweb with verbose output
+	# whatweb -v <domain or IP address>
+	# whatweb -v 192.168.202.151
+	# whatweb -v babablacksheeptest123.com
+	
+Dirb
+
++ Bruteforcing web directory of the target website
+
++ Require wordlist of directory, can be choose from /usr/share/wordlists/dirb
+
++ Usage
+	# drib <url with protocol (https:// http://)> <path to wordlist>
+	# dirb http://testwebsite.com /usr/share/wordlists/dirb/common.txt
