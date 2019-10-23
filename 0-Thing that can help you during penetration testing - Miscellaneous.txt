@@ -21,3 +21,33 @@ wordlist file - /usr/share/wordlists
  [*] HASH_LIST = /var/lib/veil/output/hashes.txt
  [I] Path '/etc/veil/' Created
  [I] Configuration File Written To: '/etc/veil/settings.py'
+ 
+ 
+ Spawning TTY Shell
+ 
+	# python -c 'import pty; pty.spawn("/bin/sh")'
+	# echo os.system('/bin/bash')
+	# /bin/sh -i
+	# perl —e 'exec "/bin/sh";'
+	# perl: exec "/bin/sh";
+	# ruby: exec "/bin/sh"
+	# lua: os.execute('/bin/sh')
+
++ (From within IRB)
+	# exec "/bin/sh"
+
++ (From within vi)
+	# :!bash
+
++ (From within vi)
+	# :set shell=/bin/bash:shell
+
++ (From within nmap)
+	# !sh
+ 
+ 
++ Python Simple HTTP Server
+
+# python -m SimpleHTTPServer <port number>
+# python -m SimpleHTTPServer 8000
+ 
