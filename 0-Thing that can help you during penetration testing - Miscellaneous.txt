@@ -48,6 +48,5 @@ wordlist file - /usr/share/wordlists
  
 + Python Simple HTTP Server
 
-# python -m SimpleHTTPServer <port number>
-# python -m SimpleHTTPServer 8000
- 
+	# python -m SimpleHTTPServer <port number>
+	# python -m SimpleHTTPServer 8000
